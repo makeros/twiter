@@ -1,0 +1,36 @@
+/*
+ * Created by: Arek Czogała
+ * Description: static less mixins - web cross
+ */
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.box-shadow(@h: 0px, @v: 0px, @b: 1px, @s: 0px, @c: rgba(0,0,0,1) ){
+  box-shadow: @h @v @b @s @c;
+  -moz-box-shadow: @h @v @b @s @c;
+  -webkit-box-shadow: @h @v @b @s @c;
+}
+
+.transparent(@opacity: 1) {
+  -moz-opacity:@opacity; 
+  -khtml-opacity: @opacity;
+  opacity: @opacity;
+}
+
+.transition(@element, @time: 0.2s){
+  transition: @element @time;
+  -moz-transition: @element @time; /* Firefox 4 */
+  -webkit-transition: @element @time; /* Safari and Chrome */
+  -o-transition: @element @time; /* Opera */
+}
+.transform(@item){
+  transform: @item;
+  -ms-transform: @item;
+  -webkit-transform: @item; 
+  -o-transform: @item;
+  -moz-transform: @item;
+}
